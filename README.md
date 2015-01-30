@@ -23,7 +23,7 @@ The webcomponent supports the following configuration options:
 | element_id  | custom DOM element id  | Yes
 | width | player width | No
 | height | player height | No
-|route | video=video|playlist=playlist | Yes
+|route | video=video,playlist=playlist | Yes
 
 ###Compatibility
 Supported by most evergreen browsers.
