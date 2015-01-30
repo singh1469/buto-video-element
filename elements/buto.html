@@ -1,0 +1,49 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<polymer-element name="buto-video">
+    <template>
+        <style>
+            :host {
+                display: block;  /* custom elements are displayed inline by default */
+            }
+        </style>
+        <content></content>
+    </template>
+
+    <script>
+        window.addEventListener('polymer-ready', function(e) {
+            //console.log('polymer-ready');
+        });
+
+        Polymer({
+            butoConfig: {},
+        
+        /*
+         * Setup butoConfig
+         */
+        created: function() {
+
+            var configString = this.getAttribute('data-config');
+            if (configString === undefined) {
+                throw "buto-video error, element must contain a `data-config` attribute";
+            }
+
+            try {
+                this.butoConfig = JSON.parse(configString);
+                //remove type
+                var script = document.createElement("script");
+                script.setAttribute("async", true);
+                var data = JSON.stringify(this.butoConfig);
+                script.src = "//js.buto.tv/" + this.butoConfig.route + "/" + data + "/" + 'akita';
+                this.appendChild(script);
+                console.log("//js.buto.tv/" + this.butoConfig.route + "/" + data + "/" + 'akita');
+
+            } catch (e) {
+                throw e.message;
+            }
+        }
+        });
+
+        
+    </script>
+</polymer-element>
