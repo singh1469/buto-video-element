@@ -18,11 +18,12 @@ Add the following to your page:
 The webcomponent supports the following configuration options:
 
 | Name  | Description  | Required |
-|---|---|
+|---|---|---|
 | object_id  | video/playlist identifier  | Yes
 | element_id  | custom DOM element id  | Yes
 | width | player width | No
 | height | player height | No
+|route | video=video|playlist=playlist | Yes
 
 ###Compatibility
 Supported by most evergreen browsers.
