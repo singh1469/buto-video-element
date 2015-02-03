@@ -1,9 +1,9 @@
 {
-  "name": "filepicker-webcomponent",
+  "name": "buto-video-element",
   "version": "0.0.0",
-  "homepage": "https://github.com/singh1469/filepicker-webcomponent",
+  "homepage": "https://github.com/singh1469/buto-video-element",
   "authors": [
-    "hardiarl <sngh1469@gmail.com>"
+    "hardiarl <singh1469@gmail.com>"
   ],
   "moduleType": [
     "globals"
