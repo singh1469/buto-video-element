@@ -10,7 +10,6 @@ bower install buto-video-element
 
 ```
 <!-- Include a Web Components polyfill -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/polymer/0.2.3/platform.js"></script>
 <script src="buto-video-element.js"></script>
 ```
 
