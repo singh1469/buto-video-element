@@ -1,7 +1,7 @@
 {
     "name": "buto-video-element",
     "version": "1.0.0",
-    "main": "elements/",
+    "main": "elements/buto-video-element.html",
     "homepage": "https://github.com/singh1469/buto-video-element",
     "authors": [
         "hardiarl <singh1469@gmail.com>"
