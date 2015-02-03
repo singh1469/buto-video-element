@@ -1,15 +1,15 @@
 ##Buto Web Component powered by Polymer
 
-Lightweight embed codes for [Buto](get.buto.tv) (OVP) users to help them embed their video content more elegantly.
+Lightweight embed codes for [Buto](http://get.buto.tv) (OVP) users to help them embed their video content more elegantly.
 
 ###Usage
-Install the component using [Bower](bower.io)
+Install the component using [Bower](http://bower.io)
 ```
 bower install buto-video-element
 ```
 
 ```
-!-- Include a Web Components polyfill -->
+<!-- Include a Web Components polyfill -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/polymer/0.2.3/platform.js"></script>
 <script src="buto-video-element.js"></script>
 ```
