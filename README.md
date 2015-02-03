@@ -3,16 +3,20 @@
 Lightweight embed codes for [Buto](get.buto.tv) (OVP) users to help them embed their video content more elegantly.
 
 ###Usage
-Declare the following in the `HEAD` tag.
+Install the component using [Bower](bower.io)
 ```
-<script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
-<link rel="import" href="elements/buto.html" />
+bower install buto-video-element
 ```
 
-Add the following to your page:
+```
+!-- Include a Web Components polyfill -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/polymer/0.2.3/platform.js"></script>
+<script src="buto-video-element.js"></script>
+```
+
+Usage:
 ```
 <buto-video id="buto_12345" data-config='{"object_id":"12345","element_id":"buto_12345","width":"500px", "height":"300px","route":"video"}'></buto-video>
-
 ```
 
 The webcomponent supports the following configuration options:
