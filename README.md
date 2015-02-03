@@ -10,6 +10,7 @@ bower install buto-video-element
 
 ```
 <!-- Include a Web Components polyfill -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.5.2/webcomponents.min.js"></script>
 <script src="buto-video-element.js"></script>
 ```
 
