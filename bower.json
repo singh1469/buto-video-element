@@ -1,7 +1,12 @@
 {
     "name": "buto-video-element",
     "version": "1.0.0",
+    "description": "A custom Buto element to be used to embed video/playlist content onto the page",
     "main": "elements/buto-video-element.html",
+    "keywords": [
+        "{{site.project_title}}",
+        "web-components"
+    ],
     "homepage": "https://github.com/singh1469/buto-video-element",
     "authors": [
         "hardiarl <singh1469@gmail.com>"
