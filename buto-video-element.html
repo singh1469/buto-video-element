@@ -1,0 +1,45 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<polymer-element name="buto-video">
+    <template>
+        <style>
+            :host {
+                display: block;  /* custom elements are displayed inline by default */
+            }
+        </style>
+        <content></content>
+    </template>
+
+    <script>
+
+        Polymer({
+            butoConfig: {},
+        
+        /*
+         * Setup butoConfig
+         */
+        created: function() {
+
+            var configString = this.getAttribute('data-config');
+            if (configString === undefined) {
+                throw "buto-video error, element must contain a `data-config` attribute";
+            }
+
+            try {
+                this.butoConfig = JSON.parse(configString);
+                //remove type
+                var script = document.createElement("script");
+                script.setAttribute("async", true);
+                var data = JSON.stringify(this.butoConfig);
+                script.src = "//js.buto.tv/" + this.butoConfig.route + "/" + data + "/" + 'akita';
+                this.appendChild(script);
+
+            } catch (e) {
+                throw e.message;
+            }
+        }
+        });
+
+        
+    </script>
+</polymer-element>

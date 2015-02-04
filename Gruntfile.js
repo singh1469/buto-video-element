@@ -13,9 +13,13 @@ module.exports = function (grunt) {
             tasks: ['default']
         },
         copy:{
-            test:{
+            webcomponentToDirBower:{
                 src:"elements/buto-video-element.html",
                 dest:"bower_components/buto-video-element/buto-video-element.html"
+            },
+            webcomponentToDirRoot:{
+                src:"elements/buto-video-element.html",
+                dest:"buto-video-element.html"
             }
         }
     });
