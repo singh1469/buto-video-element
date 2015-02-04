@@ -10,8 +10,8 @@ bower install buto-video-element
 
 ```
 <!-- Include a Web Components polyfill -->
-    <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
-    <link rel="import" href="bower_components/buto-video-element/buto-video-element.html" />
+<script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+<link rel="import" href="bower_components/buto-video-element/buto-video-element.html" />
 ```
 
 Usage:
