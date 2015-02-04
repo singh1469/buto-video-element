@@ -21,11 +21,20 @@ module.exports = function (grunt) {
                 src:"elements/buto-video-element.html",
                 dest:"buto-video-element.html"
             }
+        },
+        'wct-test': {
+            local: {
+                options: {remote: false},
+            },
+            chrome: {
+                options: {browsers: ['chrome']}
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.registerTask('default', ['jshint','copy']);
+    grunt.loadNpmTasks('web-component-tester');
+    grunt.registerTask('default', ['wct-test','jshint','copy']);
 
 };
