@@ -24,7 +24,7 @@ module.exports = function (grunt) {
         },
         'wct-test': {
             local: {
-                options: {remote: false},
+                options: {remote: false,browsers:['chrome','firefox']},
             },
             chrome: {
                 options: {browsers: ['chrome']}
@@ -35,6 +35,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('web-component-tester');
-    grunt.registerTask('default', ['wct-test','jshint','copy']);
+    grunt.registerTask('default', ['wct-test:local','jshint','copy']);
 
 };
