@@ -1,5 +1,7 @@
 before_install:
   - npm install
   - npm install -g grunt-cli
+  - npm install -g web-component-tester
+  - bower install
 script:
   - grunt test-travis
