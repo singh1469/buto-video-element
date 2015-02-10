@@ -35,6 +35,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('web-component-tester');
+    grunt.registerTask('test', ['wct-test:local']);
     grunt.registerTask('default', ['copy','wct-test:local','jshint']);
 
 };
