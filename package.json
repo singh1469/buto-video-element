@@ -1,0 +1,40 @@
+{
+  "name": "buto-video-element",
+  "version": "1.0.0",
+  "description": "Lightweight embed codes for [Buto](http://get.buto.tv) (OVP) users to help them embed their video content more elegantly.",
+  "main": "buto-video-element.html",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-copy": "^0.7.0",
+    "grunt-contrib-jshint": "^0.11.0",
+    "web-component-tester": "^2.2.1",
+    "grunt-jslint": "^1.1.12",
+    "load-grunt-tasks": "^3.1.0",
+    "grunt-contrib-watch": "^0.6.1"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-copy": "^0.7.0",
+    "grunt-contrib-jshint": "^0.11.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-jslint": "^1.1.12",
+    "load-grunt-tasks": "^3.1.0",
+    "web-component-tester": "^2.2.3"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/singh1469/buto-video-element.git"
+  },
+  "author": "singh1469@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/singh1469/buto-video-element/issues"
+  },
+  "homepage": "https://github.com/singh1469/buto-video-element"
+}
