@@ -16,7 +16,7 @@
             butoConfig: {},
         
         /*
-         * Setup butoConfig
+         * Setup specific config
          */
         created: function() {
 
@@ -27,13 +27,12 @@
 
             try {
                 this.butoConfig = JSON.parse(configString);
-                //remove type
+                //remove type property
                 var script = document.createElement("script");
                 script.setAttribute("async", true);
                 var data = JSON.stringify(this.butoConfig);
                 script.src = "//js.buto.tv/" + this.butoConfig.route + "/" + data + "/" + 'akita';
                 this.appendChild(script);
-
             } catch (e) {
                 throw e.message;
             }
