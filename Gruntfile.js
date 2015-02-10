@@ -27,12 +27,7 @@ module.exports = function (grunt) {
                 options: {remote: false,browsers:['chrome','firefox']}
             },
             travis: {
-                options: {browsers: ['firefox']}
-            }
-        },
-        'wct-travis': {
-            local: {
-                options: {remote: false,browsers:['firefox']}
+                options: {remote: false, browsers: ['firefox']}
             }
         }
     });
