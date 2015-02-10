@@ -4,47 +4,59 @@
     <meta charset="utf-8">
     <script src="../bower_components/webcomponentsjs/webcomponents.min.js"></script>
     <script src="../bower_components/web-component-tester/browser.js"></script>
-    <link rel="import" href="../elements/buto-video-element.html">
+    <link rel="import" href="../bower_components/buto-video-element/buto-video-element.html">
 </head>
 <body>
-<script>
-    var fixture = 'buto_12345';
-    fixture.addEventListener('playerReady',function(e){
-
-        var player = Akita.playerInstances[this.getAttribute('data-instance-id')];
-
-        suite('<buto-video>', function () {
-
-            test('is Akita on page', function () {
-                assert.isObject(window.Akita);
-            });
-
-            test('is player an object with a valid schedule', function () {
-                assert.isObject(player);
-                assert.isObject(player.schedule);
-            });
-
-            //
-            test('is video element nested within embed fixture', function () {
-
-            });
-
-            test('is element on page', function () {
-                //check can play
-            });
-
-            test('is element on page', function () {
-                //check can pause
-            });
-
-            test('is element on page', function () {
-                //check can seek
-            });
-        });
-    });
-</script>
 <buto-video id="buto_12345"
             data-config='{"object_id":"12345","element_id":"buto_12345","width":"500px", "height":"300px","route":"video"}'></buto-video>
+<script>
+    var fixture = document.getElementById('buto_12345');
 
+    suite('<buto-video>', function () {
+
+        test('is player an object with a valid schedule', function (done) {
+            fixture.addEventListener('playerReady', function (e) {
+                assert.isObject(window.Akita);
+                done();
+            });
+        });
+
+        test('is player an object', function () {
+            var player = Akita.playerInstances[fixture.getAttribute('data-instance-id')];
+            assert.isObject(player);
+        });
+
+        test('is schedule a valid player property', function () {
+            var player = Akita.playerInstances[fixture.getAttribute('data-instance-id')];
+            assert.property(player,'schedule');
+        });
+
+        test('is there a video element nested within embed fixture', function () {
+            var videoElements = fixture.querySelectorAll('video');
+            assert.equal(videoElements.length, 1);
+        });
+
+        test('is video playable', function (done) {
+            var player = Akita.playerInstances[fixture.getAttribute('data-instance-id')];
+            player.di.eventEmitter.on('timeupdate',function(e){
+                player.stop();
+               done();
+            });
+            player.play();
+        });
+
+        test('is video pausable', function () {
+            var player = Akita.playerInstances[fixture.getAttribute('data-instance-id')];
+            player.di.eventEmitter.on('pause',function(e){
+                done();
+            });
+            player.play();
+            setTimeout(function(){
+                player.stop();
+            },3000);
+        });
+    });
+    //});
+</script>
 </body>
 </html>
