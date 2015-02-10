@@ -14,7 +14,16 @@
 
     suite('<buto-video>', function () {
 
-        test('is player an object with a valid schedule', function (done) {
+        test('is player namespace on the page', function (done) {
+            //todo Replace with a more elegant way of checking for namespace presence,
+            //setTimeout makes sure all other tests run only when namespace is present to interact with
+            setTimeout(function () {
+                assert.isObject(window.Akita);
+                done();
+            }, 2000)
+        });
+
+        test('is player ready for user interaction', function () {
             fixture.addEventListener('playerReady', function (e) {
                 assert.isObject(window.Akita);
                 done();
@@ -28,7 +37,7 @@
 
         test('is schedule a valid player property', function () {
             var player = Akita.playerInstances[fixture.getAttribute('data-instance-id')];
-            assert.property(player,'schedule');
+            assert.property(player, 'schedule');
         });
 
         test('is there a video element nested within embed fixture', function () {
@@ -38,22 +47,22 @@
 
         test('is video playable', function (done) {
             var player = Akita.playerInstances[fixture.getAttribute('data-instance-id')];
-            player.di.eventEmitter.on('timeupdate',function(e){
+            player.di.eventEmitter.on('timeupdate', function (e) {
                 player.stop();
-               done();
+                done();
             });
             player.play();
         });
 
         test('is video pausable', function () {
             var player = Akita.playerInstances[fixture.getAttribute('data-instance-id')];
-            player.di.eventEmitter.on('pause',function(e){
+            player.di.eventEmitter.on('pause', function (e) {
                 done();
             });
             player.play();
-            setTimeout(function(){
+            setTimeout(function () {
                 player.stop();
-            },3000);
+            }, 3000);
         });
     });
     //});
