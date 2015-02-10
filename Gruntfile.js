@@ -26,8 +26,13 @@ module.exports = function (grunt) {
             local: {
                 options: {remote: false,browsers:['chrome','firefox']}
             },
-            chrome: {
-                options: {browsers: ['chrome']}
+            travis: {
+                options: {browsers: ['firefox']}
+            }
+        },
+        'wct-travis': {
+            local: {
+                options: {remote: false,browsers:['firefox']}
             }
         }
     });
@@ -36,6 +41,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('web-component-tester');
     grunt.registerTask('test', ['wct-test:local']);
+    grunt.registerTask('test-travis', ['wct-test:travis']);
     grunt.registerTask('default', ['copy','wct-test:local','jshint']);
 
 };

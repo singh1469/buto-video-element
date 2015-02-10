@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/singh1469/buto-video-element.svg?branch=master)](https://travis-ci.org/singh1469/buto-video-element)
 ##Buto Web Component powered by Polymer
 
 Lightweight embed codes for [Buto](http://get.buto.tv) (OVP) users to help them embed their video content more elegantly.
