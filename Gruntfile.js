@@ -38,5 +38,4 @@ module.exports = function (grunt) {
     grunt.registerTask('test', ['wct-test:local']);
     grunt.registerTask('test-travis', ['wct-test:travis']);
     grunt.registerTask('default', ['copy','wct-test:local','jshint']);
-
 };
