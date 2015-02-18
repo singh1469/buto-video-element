@@ -10,6 +10,7 @@
 <buto-video id="buto_12345"
             data-config='{"object_id":"12345","element_id":"buto_12345","width":"500px", "height":"300px","route":"video"}'></buto-video>
 <script>
+    Capybara.default_wait_time = 999;
     var fixture = document.getElementById('buto_12345');
 
     suite('<buto-video>', function () {
