@@ -26,9 +26,9 @@
                     done();
                 }
                 else{
-                    if(count>10){
+                    if(count>20){
                         clearTimeout(timeout);
-                        assert.isObject(window.Akita);
+                        assert.equal(1,0);
                         done();
                     }
                 }
