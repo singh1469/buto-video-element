@@ -20,7 +20,7 @@
             var count = 0;
             var timeout = setTimeout(function () {
                 count++;
-                if(window.Akita!=='undefined'){
+                if(window.Akita!==undefined){
                     clearTimeout(timeout);
                     assert.isObject(window.Akita);
                     done();
