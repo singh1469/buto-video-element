@@ -26,9 +26,9 @@
                     done();
                 }
                 else{
-                    if(count>20){
+                    if(count>=10){
                         clearTimeout(timeout);
-                        assert.equal(1,0);
+                        assert.equal('akita name space does not exist','setTimeout timed out');
                         done();
                     }
                 }
