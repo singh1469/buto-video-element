@@ -19,14 +19,14 @@
             //setTimeout makes sure all other tests run only when namespace is present to interact with
             var count = 0;
             var timeout = setTimeout(function () {
-                count++;
+                count= count +1;
                 if(window.Akita!==undefined){
                     clearTimeout(timeout);
                     assert.isObject(window.Akita);
                     done();
                 }
                 else{
-                    if(count>=5){
+                    if(count>=4){
                         clearTimeout(timeout);
                         assert.equal('akita name space does not exist','setTimeout timed out');
                         done();
