@@ -26,13 +26,13 @@
                     done();
                 }
                 else{
-                    if(count>=10){
+                    if(count>=5){
                         clearTimeout(timeout);
                         assert.equal('akita name space does not exist','setTimeout timed out');
                         done();
                     }
                 }
-            }, 5000)
+            }, 1000)
         });
 
         test('is player ready for user interaction', function () {
