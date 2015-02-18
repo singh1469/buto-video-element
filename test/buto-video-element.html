@@ -17,9 +17,21 @@
         test('is player namespace on the page', function (done) {
             //todo Replace with a more elegant way of checking for namespace presence,
             //setTimeout makes sure all other tests run only when namespace is present to interact with
-            setTimeout(function () {
-                assert.isObject(window.Akita);
-                done();
+            var count = 0;
+            var timeout = setTimeout(function () {
+                count++;
+                if(window.Akita!=='undefined'){
+                    clearTimeout(timeout);
+                    assert.isObject(window.Akita);
+                    done();
+                }
+                else{
+                    if(count>3){
+                        clearTimeout(timeout);
+                        assert.isObject(window.Akita);
+                        done();
+                    }
+                }
             }, 5000)
         });
 
