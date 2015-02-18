@@ -19,7 +19,6 @@
             //setTimeout makes sure all other tests run only when namespace is present to interact with
             var count = 0;
             var timeout = window.setTimeout(function () {
-                assert.equal('x','y');
                 count= count +1;
                 if(window.Akita!==undefined){
                     window.clearTimeout(timeout);
