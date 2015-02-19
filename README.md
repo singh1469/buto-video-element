@@ -33,7 +33,3 @@ The webcomponent supports the following configuration options:
 ###Compatibility
 Supported by most evergreen browsers.
 See [Polymer compatibility page](https://www.polymer-project.org/resources/compatibility.html) for more details.
-
-###TODO
-Tests
-polymer tester
