@@ -17,21 +17,17 @@
         test('is player namespace on the page', function (done) {
             //todo Replace with a more elegant way of checking for namespace presence,
             //setTimeout makes sure all other tests run only when namespace is present to interact with
-            var count = 0;
             var timeout = window.setTimeout(function () {
-                //count= count +1;
                 if(window.Akita!==undefined){
                     window.clearTimeout(timeout);
                     assert.isObject(window.Akita);
                     done();
                 }
                 else{
-                    //if(count>=4){
-                        window.clearTimeout(timeout);
-                        var html = document.getElementById('buto_12345').innerHTML;
-                        assert.equal('akita name space does not exist',html);
-                        done();
-                    //}
+                    window.clearTimeout(timeout);
+                    var html = document.getElementById('buto_12345').innerHTML;
+                    assert.equal('akita name space does not exist',html);
+                    done();
                 }
             }, 6000)
         });
