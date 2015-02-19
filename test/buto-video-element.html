@@ -54,14 +54,14 @@
             assert.equal(videoElements.length, 1);
         });
 
-        test('is video playable', function (done) {
-            var player = Akita.playerInstances[fixture.getAttribute('data-instance-id')];
-            player.di.eventEmitter.on('timeupdate', function (e) {
-                player.stop();
-                done();
-            });
-            player.play();
-        });
+        //test('is video playable', function (done) {
+        //    var player = Akita.playerInstances[fixture.getAttribute('data-instance-id')];
+        //    player.di.eventEmitter.on('timeupdate', function (e) {
+        //        player.stop();
+        //        done();
+        //    });
+        //    player.play();
+        //});
 
         test('is video pausable', function () {
             var player = Akita.playerInstances[fixture.getAttribute('data-instance-id')];
