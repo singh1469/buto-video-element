@@ -36,6 +36,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('web-component-tester');
     grunt.registerTask('test', ['wct-test:local']);
-    grunt.registerTask('test-travis', ['wct-test:travis']);
+    grunt.registerTask('test-travis', ['copy:webcomponentToDirBower','wct-test:travis']);
     grunt.registerTask('default', ['copy', 'wct-test:local', 'jshint']);
 };
